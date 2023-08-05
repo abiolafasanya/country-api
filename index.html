@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Rest Api</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h3>Where in the world?</h3>
+        <button class="theme-switch">
+          <ion-icon name="moon" class="switch-icon"></ion-icon>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="filter-area">
+        <div id="searchArea">
+          <ion-icon name="search" class="search-icon"></ion-icon>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="search for a country..."
+          />
+        </div>
+        <div class="selection-panel" id="filter-panel">
+          <div id="current-selection" class="main-selection">
+            <span>Africa</span>
+            <ion-icon name="caret-down" class="switch-icon"></ion-icon>
+          </div>
+          <div id="filter" class="selection"></div>
+        </div>
+      </section>
+
+      <section id="countries-container"></section>
+
+      <section id="countryInfo">
+        <button class="back-button">
+          <ion-icon name="arrow-back-outline" class="arrow-icon"></ion-icon>
+          <span>Back</span>
+        </button>
+
+        <div id="countryDetail">
+          <figure>
+            <img src="" alt="" />
+          </figure>
+          <div>
+            <h2 class="info-name"></h2>
+            <article class="" id="info-a"></article>
+            <article class="" id="info-b"></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script async src="/js/script.js"></script>
+    <script async src="/js/country.js"></script>
+    <script src="https://use.fontawesome.com/876f7b8596.js"></script>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  </body>
+</html>
