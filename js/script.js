@@ -32,7 +32,8 @@ applyTheme();
 themeSwitch.addEventListener("click", toggleBackground);
 
 function fetchData() {
-  return fetch("data.json")
+  const url = "https://abiolafasanya.github.io/country-api/data.json"
+  return fetch(url || 'data.json')
     .then((response) => response.json())
     .catch((error) => {
       console.error("Error fetching data:", error);
