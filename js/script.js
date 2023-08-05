@@ -85,7 +85,9 @@ function openSelection() {
     filterOption.innerHTML = "";
     filterPanel.classList.add("hidden");
   }
-
+  // Promise.resolve().then(() => {
+  //   console.log("state");
+  // });
 }
 
 const countriesContainer = document.querySelector("#countries-container");
