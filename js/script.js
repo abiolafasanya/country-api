@@ -32,7 +32,7 @@ applyTheme();
 themeSwitch.addEventListener("click", toggleBackground);
 
 function fetchData() {
-  return fetch("./data.json")
+  return fetch(".././data.json")
     .then((response) => response.json())
     .catch((error) => {
       console.error("Error fetching data:", error);
