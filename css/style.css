@@ -56,6 +56,7 @@ body {
   margin: auto;
   font-family: "Nunito Sans", sans-serif;
 }
+
 .dark {
   background-color: var(--dark-mode-bg);
   color: var(--dark-mode-text);
@@ -72,6 +73,7 @@ header {
   z-index: 1;
   top: 0;
 }
+
 .dark header {
   background-color: var(--dark-mode-element);
   box-shadow: var(--shadow);
@@ -94,6 +96,7 @@ header div button {
   align-items: center;
   gap: 1rem;
 }
+
 .dark header div button {
   color: var(--dark-mode-text);
 }
@@ -104,10 +107,12 @@ header .theme-switch {
   outline: none;
   font-family: "Nunito Sans", sans-serif;
 }
+
 header .switch-icon {
   color: var(--light-mode-text);
   font-size: 1rem;
 }
+
 .dark header .switch-icon {
   color: var(--dark-mode-text);
   font-size: 1rem;
@@ -115,18 +120,14 @@ header .switch-icon {
 
 main {
   max-width: 1280px;
-  margin:  auto;
+  margin: auto;
   margin-top: 7rem;
   padding: 50px 0;
-  /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 main .filter-area {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 }
 
 main .filter-area #searchArea {
@@ -168,6 +169,7 @@ main .filter-area .selection-panel {
   position: relative;
   cursor: pointer;
 }
+
 .main-selection {
   padding: 1rem;
   box-shadow: var(--shadow);
@@ -177,10 +179,12 @@ main .filter-area .selection-panel {
   align-items: center;
   justify-content: space-between;
 }
+
 .dark .main-selection {
   background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
 }
+
 .selection {
   position: absolute;
   margin-top: 10px;
@@ -193,6 +197,7 @@ main .filter-area .selection-panel {
   box-sizing: border-box;
   width: 100%;
 }
+
 .dark .selection {
   background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
@@ -220,6 +225,7 @@ main .filter-area .selection-panel {
 .selection-option:hover {
   background-color: var(--light-mode-element-hover);
 }
+
 .dark .selection-option:hover {
   background-color: var(--dark-mode-element-hover);
 }
@@ -249,6 +255,7 @@ main .filter-area .selection-panel {
   box-shadow: var(--shadow);
   border-radius: 4px;
 }
+
 .dark #countries-container .country-card {
   background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
@@ -277,12 +284,13 @@ main .filter-area .selection-panel {
 #countries-container .country-card article h5 span {
   font-weight: 300;
 }
+
 .dark #countries-container .country-card article h5 span {
   color: hsl(0, 1%, 85%);
 }
 
 .back-button {
-  padding: .5rem .75rem;
+  padding: 0.5rem 0.75rem;
   outline: none;
   filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
   display: flex;
@@ -306,18 +314,19 @@ main .filter-area .selection-panel {
   justify-content: space-between;
   gap: 5rem;
   align-items: center;
-  /* max-width: 1204px; */
 }
 
 .img-card {
   max-width: 450px;
   overflow: hidden;
 }
+
 .img-card img {
   width: 100%;
   box-shadow: var(--shadow);
   border-radius: 4px;
 }
+
 .country-bio {
   display: flex;
   gap: 4rem;
@@ -325,10 +334,12 @@ main .filter-area .selection-panel {
   width: 100%;
   max-width: 550px;
 }
+
 .country-desc h3 {
   font-size: 36px;
   font-weight: 700;
 }
+
 .border-group {
   margin-top: 4rem;
 }
@@ -338,8 +349,9 @@ main .filter-area .selection-panel {
   gap: 1rem;
   flex-wrap: wrap;
 }
+
 .border-item {
-  padding: .5rem;
+  padding: 0.5rem;
   box-shadow: var(--shadow);
   border-radius: 4px;
   font-size: 14px;
@@ -347,21 +359,24 @@ main .filter-area .selection-panel {
   background-color: var(--light-mode-element);
   color: var(--light-mode-text);
 }
+
 .dark .border-item {
   background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
 }
 
-/* For small screens with minimum width of 298px and above */
+/* For small screens with a minimum width of 298px and above */
 @media (min-width: 298px) and (max-width: 680px) {
   main {
     padding: 1rem;
   }
+
   main .filter-area {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
+
   main .filter-area .selection-panel {
     max-width: 75%;
   }
@@ -384,48 +399,49 @@ main .filter-area .selection-panel {
     max-width: 100%;
   }
 
+  .country-data {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+  }
 
-.country-data {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5rem;
-}
+  .img-card {
+    max-width: 100%;
+  }
 
-.img-card {
-  max-width: 100%;
-}
+  .country-bio {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 550px;
+  }
 
-.country-bio {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  margin-top: 2rem;
-  width: 100%;
-  max-width: 550px;
-}
-.country-desc h3 {
-  font-size: 36px;
-  font-weight: 700;
-}
-.border-group {
-  margin-top: 4rem;
-}
+  .country-desc h3 {
+    font-size: 36px;
+    font-weight: 700;
+  }
 
-.border {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.border-item {
-  padding: .5rem;
-  box-shadow: var(--shadow);
-  border-radius: 4px;
-  font-size: 14px;
-  width: 120px;
-  margin-top: 1rem;
-}
+  .border-group {
+    margin-top: 4rem;
+  }
 
+  .border {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .border-item {
+    padding: 0.5rem;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    font-size: 14px;
+    width: 120px;
+    margin-top: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -446,13 +462,10 @@ main .filter-area .selection-panel {
     display: flex;
     gap: 3rem;
     align-items: center;
-    /* justify-content: center; */
-    margin-top: 4rem;
   }
 
   #countries-container .country-card {
     width: 100%;
-    margin-bottom: 1rem;
     max-width: 350px;
   }
 }
