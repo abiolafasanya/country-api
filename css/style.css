@@ -299,6 +299,11 @@ main .filter-area .selection-panel {
   gap: 1rem;
   cursor: pointer;
 }
+.dark .back-button {
+  background-color: var(--dark-mode-element);
+  color: var(--dark-mode-text);
+  border: 1px solid var(--dark-mode-element);
+}
 
 .arrow-icon {
   font-size: 16px;
@@ -342,6 +347,9 @@ main .filter-area .selection-panel {
 
 .border-group {
   margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .border {
@@ -358,6 +366,7 @@ main .filter-area .selection-panel {
   width: 120px;
   background-color: var(--light-mode-element);
   color: var(--light-mode-text);
+  cursor: pointer;
 }
 
 .dark .border-item {

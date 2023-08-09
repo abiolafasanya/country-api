@@ -41,7 +41,7 @@ async function fetchData() {
   }
 }
 
-const backBtn = document.querySelector('.back-button');
+const backBtn = document.querySelector(".back-button");
 backBtn.style.display = "none";
 
 const filterOption = document.querySelector("#filter");
@@ -164,12 +164,19 @@ document.querySelector(".back-button").addEventListener("click", (e) => {
   e.preventDefault();
   item1.style.display = "flex";
   item2.style.display = "flex";
-  backBtn.classList.add('hidden');
+  backBtn.classList.add("hidden");
   backBtn.style.display = "none";
   countryDetail.innerHTML = "";
 });
 
+function setCountry(border) {
+  console.log(border);
+  const data = countryData.filter((country) => country?.alpha3Code == border);
+  if(data?.length > 0) return renderDetailsPage(data[0  ]);
+}
+
 function renderDetailsPage(option) {
+  console.log("checking if recieved", option);
   backBtn.style.display = "flex";
   const countryDetail = document.querySelector("#countryDetail");
   countryDetail.innerHTML = "";
@@ -179,7 +186,7 @@ function renderDetailsPage(option) {
   const countryCard = `
   <div class="country-data" data-region="${option.region}">
     <div class="img-card">
-      <img src="${option.flags.svg}" alt="${option.name}" />
+      <img src="${option.flags?.svg}" alt="${option.name}" />
     </div>
     <article class="country-desc">
       <h3>${option.name}</h3>
@@ -192,9 +199,15 @@ function renderDetailsPage(option) {
           <p><b>Capital:</b> <span>${option.capital}</span></p>
         </div>
         <div>
-          <p><b>Top Level Domain:</b> <span>${option.topLevelDomain.join(", ")}</span></p>
-          <p><b>Currencies:</b> <span>${option.languages.map((lang) => lang.name).join(", ")}</span></p>
-          <p><b>Language:</b> <span>${option.currencies.map((currency) => currency.code).join(", ")}</span></p>
+          <p><b>Top Level Domain:</b> <span>${option.topLevelDomain?.join(
+            ", "
+          )}</span></p>
+          <p><b>Currencies:</b> <span>${option.languages
+            ?.map((lang) => lang.name)
+            .join(", ")}</span></p>
+          <p><b>Language:</b> <span>${option.currencies
+            ?.map((currency) => currency.code)
+            .join(", ")}</span></p>
         </div>
       </div>
       <div class="border-group">
@@ -202,7 +215,12 @@ function renderDetailsPage(option) {
         <div class="border">
           ${
             option?.borders
-              ? option?.borders.map((border) => `<div class="border-item">${border}</div>`).join('')
+              ? option?.borders
+                  ?.map(
+                    (border) =>
+                      `<div onclick="setCountry('${border}')" class="border-item">${border}</div>`
+                  )
+                  .join("")
               : ""
           }
         </div>
